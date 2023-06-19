@@ -104,7 +104,7 @@ agent_chain = AgentExecutor.from_agent_and_tools(agent=agent, tools=tools, verbo
 
 spacing = "<br>"
 header_content = "<p style='text-align: center;''>Hello there! I am a conversation bot trained on Cannes 2023 data a few weeks before the festival. I was designed to help cinephiles learn more before the big event. Ask me about the festival as if it hasn’t happened yet and you’d like to learn more. I’ll be happy to answer your questions.</p>"
-footer_content = "<p style='text-align: center;''>Check out my <a href='https://duckduckgo.com'>GitHub Repo</a> to learn how I was created.</p>"
+footer_content = "<p style='text-align: center;''>Check out my <a href='https://github.com/alandavidgrunberg/Cannes_Chatbot'>GitHub Repo</a> to learn how I was created.</p>"
 
 with gr.Blocks(title="Cannes 2023 Q&A", theme="gradio/monochrome") as demo:
     spacer = gr.Markdown(spacing)
