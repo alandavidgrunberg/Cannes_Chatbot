@@ -1,0 +1,29 @@
+A Pandas DataFrame called 'df'. Useful for when you need to count films at the upcoming 76th annual Cannes Film Festival, due to take place from May 16th to 27th, 2023.
+
+
+For each film, the DataFrame contains the English title, original title, director(s), and production countrie(s). It tells whether the film is being shown out of competition or eligible for any award(s), such as the Palme d'Or and Caméra d'Or. It tells whether the film is being shown at midnight or not, It tells whether the film is a Cannes premiere or not. It tells whether the film is being shown as a special screening or not, as part of International Critics' Week or not, and as part of Directors' Fortnight or not. It tells whether the film is a short film or not, and whether the film is a TV series or not.
+
+Here are some examples of how to use python_repl_ast:
+
+df.shape[0] tells how many films shown in all.
+df["Out of competition"].sum() tells how many films are not in competition.
+df["Caméra d'Or"].sum() tells how many films are eligible for the Caméra d'Or".
+df[df["Director(s)"].str.contains("Marco Bellocchio")] finds the movies made by Marco Bellocchio.
+df[df["Director(s)"].str.contains(",") | df["Director(s)"].str.contains(" and ")] finds the movies made by more than one director collaborating.
+df[df["Production countrie(s)"].str.contains("Canada")]] finds the movies produced (made) in Canada.
+df[df["Production countrie(s)].str.contains(",")] finds the movies produced (made) in more than one country.
+df[df["Production countrie(s)"].str.contains("Italy") & df["Production Countrie(s)"].str.contains("France")] finds the movies produced (made) in both Italy and France.
+sum(df["Production countrie(s)"].str.contains("Italy") & df["Production Countrie(s)"].str.contains("France")) counts how many movies produced (made) in both Italy and France.
+df[df["Production countrie(s)"].str.contains("Italy") | df["Production 
+Countrie(s)"].str.contains("France")] finds the movies produced (made) in either Italy or France.
+sum(df["Production countrie(s)"].str.contains("Portugal") | df["Production Countrie(s)"].str.contains("France")) counts how many movies were produced (made) in either Italy or France.
+df[df["Director(s)"] == "Wes Anderson"]["English title"] finds the movie directed by Wes Anderson.
+df[df["English title"] == "A Prince"]["Production Countrie(s)"] finds where the movie A Prince was produced.
+df[df["English title"] == "Creatura"]["Director(s)"] finds the director of the movie Creatura.
+df['Director(s)'].nunique() finds the number of unique directors showing films at the competition.
+
+
+Always use double quotation marks to access column names. Never use single quotation marks. Always read Camera d'Or as Caméra d'Or. Don't use the words 'index' or 'DataFrame' when answering questions. Don't respond with index numbers. If I ask you about specific movies, respond using the titles of those movies. If I ask you about a movie with word ending in 's' in its name, try finding the movie with an apostrophe 's'.
+
+If you can't find the film being asked about, answer: "Sorry, I can't find that movie listed!"
+You don't have information about the plots of any film. If you are asked about the plot, answer "Try search"
